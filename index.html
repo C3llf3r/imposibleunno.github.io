@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Una página especial para pedir perdón de una manera única e interactiva">
+    <meta name="author" content="NeritoFer">
+    <title>¿Mi amor me perdonas? ❤️</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="impossible_style.css">
+    <link rel="stylesheet" href="login_styles.css">
+</head>
+
+<body>
+    <!-- Canvas para partículas de fondo -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <div class="container" id="container">
+        <div id="mainContent">
+            <h1 class="question" id="question">¿Me perdonas?</h1>
+            <div class="emoji-header">
+                <img src="img/triste.jpg" alt="Triste">
+            </div>
+            <p class="subtitle">No volvera a pasar 🥺</p>
+            <div class="buttons">
+                <button id="yesButton" class="btn-yes">
+                    <span>Sí ❤️</span>
+                </button>
+                <button id="noButton" class="btn-no">
+                    <span>No!😤</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Inicio de Sesión -->
+    <div class="login-modal-overlay" id="loginModal">
+        <div class="login-modal">
+            <div class="login-header">
+                <h2>💕Acceso Especial💕</h2>
+                <p>Ingresa tu Nombre para continuar</p>
+            </div>
+            <div class="login-body">
+                <div class="login-field">
+                    <label for="username">Nombre</label>
+                    <input type="text" id="username" placeholder="Ingresa tu nombre" autocomplete="off">
+                </div>
+                <div class="login-field">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="Tu contraseña secreta">
+                </div>
+                <button class="login-button" id="loginButton">
+                    Ingresar ❤️
+                </button>
+                <p class="login-hint">Pideme la contraseña 😉</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Error -->
+    <div class="error-modal-overlay" id="errorModal">
+        <div class="error-modal">
+            <div class="error-modal-header">
+                <div class="error-modal-title">
+                    System Error
+                </div>
+                <div class="error-modal-close" id="closeModal">✕</div>
+            </div>
+            <div class="error-modal-body">
+                <div class="error-icon">❌</div>
+                <div class="error-message">
+                    <div class="error-message-title">Error 404:</div>
+                    <div>Opción "No perdonar" no encontrada en la base de datos del corazón.</div>
+                    <div style="margin-top: 10px;">Reinicio inminente...</div>
+                </div>
+            </div>
+            <div class="error-modal-footer">
+                <button class="error-modal-button" id="acceptError">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="impossible_script.js"></script>
+</body>
+
+</html>
